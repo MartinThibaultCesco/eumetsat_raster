@@ -6,7 +6,6 @@ eumetsat_rastext <- function(dir,layer,crs){
       sapply(pkg, require, character.only = TRUE)
   } 
   packages <- c("raster","sf")
-  
   load(packages)
   
   data <- nc_open(paste(dir,paste(layer,"nc",sep="."), sep="/"))
