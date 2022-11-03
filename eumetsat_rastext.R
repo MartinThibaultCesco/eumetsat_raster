@@ -8,8 +8,7 @@ eumetsat_rastext <- function(dir,layer,crs){
   packages <- c("raster","sf")
   
   load(packages)
-  library(raster)
-  library(sf)
+  
   data <- nc_open(paste(dir,paste(layer,"nc",sep="."), sep="/"))
   coord <- nc_open(paste(dir,"geo_coordinates.nc", sep="/"))
   spdf <- SpatialPointsDataFrame(
